@@ -96,34 +96,69 @@ Step14. click on debug and simulate using simulation as shown below
   
 
 ## STM 32 CUBE PROGRAM :
+```
+#include "main.h"
 
+TIM_HandleTypeDef htim2;
 
+void SystemClock_Config(void);
+static void MX_GPIO_Init(void);
+static void MX_TIM2_Init(void);
 
+int main(void)
+{
+  HAL_Init();
+  SystemClock_Config();
+  MX_GPIO_Init();
+  MX_TIM2_Init();
+ 
+  HAL_TIM_Base_Start(&htim2);
+  HAL_TIM_PWM_Init(&htim2);
+  HAL_TIM_PWM_Start(&htim2,TIM_CHANNEL_1);
+
+  while (1)
+  {
+   
+ }
+```
 
 
 ## Output screen shots of proteus  :
+
+![Screenshot 2025-05-05 082431](https://github.com/user-attachments/assets/b05f391b-67dd-4b21-ab68-d5401c71234e)
  
- 
- ## CIRCUIT DIAGRAM (EXPORT THE GRAPHICS TO PDF AND ADD THE SCREEN SHOT HERE): 
- 
+## CIRCUIT DIAGRAM (EXPORT THE GRAPHICS TO PDF AND ADD THE SCREEN SHOT HERE): 
+
+![image](https://github.com/user-attachments/assets/9f73e2c2-1175-418b-b611-1986e399e05d)
 
 ## DUTY CYCLE AND FREQUENCY CALCULATION 
 FOR PULSE AT 500
+![Screenshot 2025-05-05 082412](https://github.com/user-attachments/assets/008b1e7e-fe5a-4102-b00b-8ec68276c30a)
+
+TON = 1.5*20*10^-6
+    = 30*10^-6 s
+TOFF=1.5*20*10^-6
+    =30*10^-6 s
+TOTAL TIME =TON+TOFF
+           =60*10^-6 s
+FREQUENCY = 1/(TOTAL TIME)
+          =1/60*10^-6
+          =0.016*10^6 s
+DUTY CYCLE=TON/(TON+TOFF)
+          =30*10^-6/(60*10^-6)
+          =0.5
+     IN % = 0.5 * 100
+          = 50 %
+
+FOR PULSE AT 750
 
 TON = 
 TOFF=
 TOTAL TIME = 
 FREQUENCY = 1/(TOTAL TIME)
 
-FOR PULSE AT 700
 
-TON = 
-TOFF=
-TOTAL TIME = 
-FREQUENCY = 1/(TOTAL TIME)
-
-
-FOR PULSE AT 900
+FOR PULSE AT 250
 
 TON = 
 TOFF=
