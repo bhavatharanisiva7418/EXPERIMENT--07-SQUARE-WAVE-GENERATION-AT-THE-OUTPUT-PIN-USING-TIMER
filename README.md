@@ -134,7 +134,7 @@ int main(void)
 ## DUTY CYCLE AND FREQUENCY CALCULATION 
 FOR PULSE AT 500
 ![Screenshot 2025-05-05 082412](https://github.com/user-attachments/assets/008b1e7e-fe5a-4102-b00b-8ec68276c30a)
-
+```
 TON = 1.5*20*10^-6
     = 30*10^-6 s
 TOFF=1.5*20*10^-6
@@ -149,7 +149,7 @@ DUTY CYCLE=TON/(TON+TOFF)
           =0.5
      IN % = 0.5 * 100
           = 50 %
-
+```
 FOR PULSE AT 750
 
 TON = 
