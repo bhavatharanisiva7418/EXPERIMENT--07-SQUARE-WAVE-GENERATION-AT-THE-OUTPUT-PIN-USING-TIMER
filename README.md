@@ -152,20 +152,44 @@ DUTY CYCLE=TON/(TON+TOFF)
 ```
 FOR PULSE AT 750
 
-TON = 
-TOFF=
-TOTAL TIME = 
+![Screenshot 2025-05-05 082833](https://github.com/user-attachments/assets/d1cef80f-eb04-46bb-8a8a-6e8ad74e3f3c)
+
+```
+TON = 2.25*20*10^-6
+    = 45*10^-6 s
+TOFF = 0.75*20*10^-6
+     = 15*10^-6 s
+TOTAL TIME = TON + TOFF
+           = 60*10^-6 s
 FREQUENCY = 1/(TOTAL TIME)
-
-
+          = 1/(60*10^-6)
+          = 0.016*10^6 s
+DUTY CYCLE = TON/(TON+TOFF)
+           = 45*10^-6/(60*10^-6)
+           = 0.75
+    IN % = 0.75*100
+         = 75 %
+```
 FOR PULSE AT 250
 
-TON = 
-TOFF=
-TOTAL TIME = 
+![Screenshot 2025-05-05 082948](https://github.com/user-attachments/assets/8b686865-0842-4c9d-88eb-d8a9fc8efb37)
+
+```
+TON = 0.75*20*10^-6
+    = 15*10^-6 s
+TOFF = 2.25*20*10^-6
+     = 45*10^-6 s
+TOTAL TIME = TON + TOFF
+           = 60*10^-6 s
 FREQUENCY = 1/(TOTAL TIME)
-
-
+          = 1/(60*10^-6)
+          = 0.016*10^6 s
+DUTY CYCLE = TON/(TON+TOFF)
+           = 15*10^-6/(60*10^-6)
+           = 0.25
+    IN % = 0.25*100
+         = 25 %
+```
 ## Result :
 A PWM Signal is generated using the following frequency and various duty cycles are simulated 
 
